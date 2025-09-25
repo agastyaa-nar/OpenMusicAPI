@@ -1,27 +1,32 @@
 {
-  "name": "proyek-openmusic-api-versi-1",
+  "name": "notes-app-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./src/server.js",
+    "lint": "eslint ./src",
     "migrate": "node-pg-migrate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.35.0",
+    "eslint-config-dicodingacademy": "^0.9.4",
+    "globals": "^16.4.0",
+    "nodemon": "^3.1.10"
+  },
   "dependencies": {
-    "@hapi/hapi": "^21.4.3",
+    "@hapi/hapi": "^21.4.0",
+    "@hapi/jwt": "^3.2.1",
     "auto-bind": "^5.0.1",
+    "bcrypt": "^6.0.0",
     "dotenv": "^17.2.2",
     "joi": "^18.0.1",
-    "nanoid": "^5.1.5",
+    "nanoid": "^3.3.11",
     "node-pg-migrate": "^8.0.3",
-    "nodemon": "^3.1.10",
     "pg": "^8.16.3"
-  },
-  "devDependencies": {
-    "eslint": "^9.35.0",
-    "globals": "^16.4.0"
   }
 }
