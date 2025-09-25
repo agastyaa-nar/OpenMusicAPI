@@ -1,11 +1,10 @@
-const { default: autoBind } = require("auto-bind");
-const NotFoundError = require('../../exceptions/NotFoundError');
+const autoBind = require('auto-bind');
 
 class PlaylistSongsHandler {
-   constructor(service, playlistsService, songsService, activitiesService, validator) {
+  constructor(service, playlistsService, songsService, activitiesService, validator) {
     this._service = service;
     this._playlistsService = playlistsService;
-    this._songsService = songsService; 
+    this._songsService = songsService;
     this._activitiesService = activitiesService;
     this._validator = validator;
 

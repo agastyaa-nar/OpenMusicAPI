@@ -1,6 +1,6 @@
 const { SongPayloadSchema } = require('./schema');
 const InvariantError = require('../../exceptions/InvariantError');
- 
+
 const SongsValidator = {
   validateSongPayload: (payload) => {
     const validationResult = SongPayloadSchema.validate(payload);
@@ -9,5 +9,5 @@ const SongsValidator = {
     }
   },
 };
- 
+
 module.exports = SongsValidator;

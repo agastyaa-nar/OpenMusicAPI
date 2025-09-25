@@ -1,7 +1,8 @@
-const { default: autoBind } = require("auto-bind");
+const autoBind = require('auto-bind');
 
 class ActivitiesHandler {
-  constructor(service, playlistsService) {
+  constructor(service, playlistsService){
+
     this._service = service;
     this._playlistsService = playlistsService;
 

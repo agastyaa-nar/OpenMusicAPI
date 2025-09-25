@@ -1,4 +1,3 @@
-const SongsService = require('../../services/SongsService');
 const PlaylistSongsHandler = require('./handler');
 const routes = require('./routes');
 
