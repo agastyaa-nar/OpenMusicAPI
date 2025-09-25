@@ -46,3 +46,68 @@ It is built with **Node.js** and **Hapi.js**, supporting user authentication, pl
    ```bash
    git clone https://github.com/username/openmusic-api.git
    cd openmusic-api
+
+2. Install dependencies
+   ```bash
+   npm install
+   
+3. Setup .env file
+   ```bash
+   HOST=localhost
+   PORT=5000
+   
+   # PostgreSQL
+   PGUSER=your_user
+   PGPASSWORD=your_password
+   PGDATABASE=openmusicv3
+   PGPORT=5432
+   
+   # JWT
+   ACCESS_TOKEN_KEY=your_access_key
+   REFRESH_TOKEN_KEY=your_refresh_key
+   ACCESS_TOKEN_AGE=1800
+   
+   # RabbitMQ
+   RABBITMQ_SERVER=amqp://localhost
+   
+   # Redis
+   REDIS_SERVER=localhost
+   
+4. Run migration
+   ```bash
+   npm run migrate up
+
+5. Start the server
+   ```bash
+   npm run start
+
+---
+## 📌 API Endpoints (Examples)
+
+### 🔑 Authentication
+- `POST /users` → Register user  
+- `POST /authentications` → Login  
+- `PUT /authentications` → Refresh token  
+- `DELETE /authentications` → Logout  
+
+---
+
+### 🎵 Songs & Albums
+- `POST /songs` → Add new song  
+- `GET /songs` → Get all songs  
+- `GET /albums/{id}` → Get album details  
+
+---
+
+### 🎶 Playlists
+- `POST /playlists` → Create playlist  
+- `POST /playlists/{id}/songs` → Add song to playlist  
+- `GET /playlists/{id}/songs` → Get songs in playlist  
+- `POST /playlists/{id}/collaborations` → Add collaborator  
+
+---
+
+### 📤 Export
+- `POST /export/playlists/{id}` → Export playlist via RabbitMQ  
+
+
